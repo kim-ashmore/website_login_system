@@ -5,9 +5,10 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 # Create your views here.
 
+
 def home(request):
-    HttpResponse('Hello, I\'m working')
-    return render(request, 'login/index.html')
+    HttpResponse('Hello, Im working')
+    # return render(request, 'login/index.html')
 
 
 def signup(request):
@@ -16,8 +17,8 @@ def signup(request):
         fname = request.POST['fname']
         lname = request.POST['lname']
         email = request.POST['email']
-        pass1 = request.POST['PASS1']
-        pass2 = request.POST['PASS2']
+        pass1 = request.POST['pass1']
+        pass2 = request.POST['pass2']
 
         myuser = User.objects.create(username, email, pass1)
         myuser.first_name = fname
