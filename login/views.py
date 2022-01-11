@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from templates import login
 
 from django.contrib import messages
 # Create your views here.
 
 
 def home(request):
-    HttpResponse('Hello, Im working')
-    # return render(request, 'login/index.html')
+    # HttpResponse('Hello, Im working')
+    return render(request, 'login/index.html')
 
 
 def signup(request):
