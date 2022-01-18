@@ -8,7 +8,7 @@ from django.contrib import messages
 
 
 def home(request):
-    # HttpResponse('Hello, Im working')
+    # return HttpResponse('Hello, Im working')
     return render(request, 'login/index.html')
 
 
